@@ -5,12 +5,15 @@ import { connectDB } from "./lib/db.js";
 import cookieParser from "cookie-parser"
 import messageRoutes from "./routes/message.route.js"
 import cors from "cors"
+import bodyParser from "body-parser"
 
 dotenv.config();
 const app = express();
 
 
 const PORT= process.env.PORT;
+
+
 
 app.use(express.json()); // extract json data from the body.(Has to be before routes)
 app.use(cookieParser()); // Parse the cookie
