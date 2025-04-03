@@ -26,7 +26,7 @@ app.use(cors({
 
 
 app.use("/api/auth", authRoutes)  //Whenever we are on signup/login we would like to call this route
-app.use("/api/message", messageRoutes)
+app.use("/api/messages", messageRoutes)
 
 app.listen(PORT, () => {console.log(`Server is running on PORT: ${PORT}`)
 connectDB();
